@@ -5,7 +5,7 @@ require 'json'
 
 configure do
   set :public_folder, Proc.new { File.join(root, "static") }
-  DB = Sequel.connect('sqlite://development.db')
+  DB = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://development.db')
 end
 
 require './deployment'
