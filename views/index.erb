@@ -1,5 +1,13 @@
+<h1>New Relic Deployments and Alerts</h1>
+<% @deployments.each do |deployment| %>
 <div class="hero-unit">
-  <h1>This is a deployment</h1>
-  <p>Some information about the deployment</p>
-  <p><a class="btn btn-primary btn-large">More &raquo;</a></p>
+  <h2>Deployment: <%= deployment.description %></h2>
+  <p><%= deployment.changelog %></p>
 </div>
+<% end %>
+<% @alerts.each do |alert| %>
+<div class="hero-unit">
+  <h2>Alert: <%= alert.message %></h2>
+  <p><%= alert.long_description %></p>
+</div>
+<% end %>
