@@ -1,14 +1,14 @@
 class Alert < Sequel::Model
   DB.create_table? :alerts do
     primary_key :id
-    string :application_name
-    string :account_name
-    text :severity
-    text :message
-    text :short_description
-    text :long_description
-    string :alert_url
-    string :created_at
-    string :version
+    String :application_name
+    String :account_name
+    String :severity
+    String :message
+    String :short_description
+    String :long_description
+    String :alert_url
+    String :created_at
+    String :version
   end
 end
