@@ -5,7 +5,7 @@ require 'json'
 
 configure do
   set :public_folder, Proc.new { File.join(root, "static") }
-  DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://localhost/webhooks')
+  DB = Sequel.connect(ENV['HEROKU_POSTGRESQL_GREEN_URL'] || 'postgres://localhost/webhooks')
 end
 
 require './deployment'
