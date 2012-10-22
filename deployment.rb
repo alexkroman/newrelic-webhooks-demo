@@ -7,7 +7,7 @@ class Deployment < Sequel::Model
     String :description
     Numeric :revision
     String :deployed_by
-    DateTime :created_at
+    String :created_at
     String :version
   end
 end
