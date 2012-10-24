@@ -5,6 +5,7 @@ class Deployment < Sequel::Model
     String :account_name
     String :changelog
     String :description
+    String :deployment_url
     Numeric :revision
     String :deployed_by
     String :created_at
