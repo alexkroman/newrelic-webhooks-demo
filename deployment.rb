@@ -8,7 +8,7 @@ class Deployment < Sequel::Model
     String :deployment_url
     Numeric :revision
     String :deployed_by
-    String :created_at
+    Timestamp :created_at
     String :version
   end
 end
