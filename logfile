@@ -1,0 +1,5 @@
+LOG:  database system was shut down at 2012-10-24 11:18:25 PDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  unrecognized configuration parameter "tables"
+STATEMENT:  show tables;

@@ -1,13 +1,14 @@
-<h1>New Relic Deployments and Alerts</h1>
+<h1>New Relic Deployments</h1>
 <% @deployments.each do |deployment| %>
 <div class="hero-unit">
-  <h2>Deployment: <%= deployment.description %></h2>
-  <p><%= deployment.changelog %></p>
+  <h2>Deployment of <%= deployment.application_name %> at <%= deployment.created_at %></h2>
+  <p><a href="<%= deployment.deployment_url %>">View deployment</a></p>
 </div>
 <% end %>
+<h1>New Relic Alerts</h1>
 <% @alerts.each do |alert| %>
 <div class="hero-unit">
-  <h2>Alert: <%= alert.message %></h2>
+  <h2><%= alert.message %></h2>
   <p><%= alert.long_description %></p>
 </div>
 <% end %>

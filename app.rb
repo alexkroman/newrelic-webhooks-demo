@@ -12,8 +12,8 @@ require './deployment'
 require './alert'
 
 get '/' do
-  @deployments = Deployment.all
-  @alerts = Alert.all
+  @deployments = Deployment.order(:created_at.desc)
+  @alerts = Alert.order(:created_at.desc)
   erb :index
 end
 
