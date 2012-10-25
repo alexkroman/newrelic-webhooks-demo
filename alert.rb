@@ -9,6 +9,5 @@ class Alert < Sequel::Model
     String :long_description
     String :alert_url
     Timestamp :created_at
-    String :version
   end
 end

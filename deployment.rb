@@ -9,6 +9,5 @@ class Deployment < Sequel::Model
     Numeric :revision
     String :deployed_by
     Timestamp :created_at
-    String :version
   end
 end
